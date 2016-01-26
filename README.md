@@ -14,4 +14,4 @@ After cloning the project, type `./gradlew clean build` on the command line.
     ./gradlew bootRun
     # open http://localhost:8080 in your browser
 
-It is possible that my OpenWeather API key may expire sometime in the future. If that occurs, go to [http://openweathermap.org/appid#get]() to get a new one and place it in `src/main/resources/application.properties`
+The included OpenWeatherMap API key may expire sometime after this example was created. If that occurs, go to [http://openweathermap.org/appid#get]() to get a new one and place it in `src/main/resources/application.properties`
