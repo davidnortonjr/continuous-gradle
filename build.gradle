@@ -44,5 +44,5 @@ dependencies {
 
 import org.apache.tools.ant.filters.ReplaceTokens
 processResources {
-    filter(ReplaceTokens, tokens: [version: project.version])
+    filter(ReplaceTokens, tokens: [appVersion: project.version])
 }

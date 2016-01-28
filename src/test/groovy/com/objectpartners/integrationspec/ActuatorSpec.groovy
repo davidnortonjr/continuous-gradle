@@ -17,5 +17,6 @@ class ActuatorSpec extends BaseIntegrationSpec {
                 name: appName,
                 version: appVersion
         ]
+        result.version == '0-SNAPSHOT' || result.version ==~ /[\d\.]*/
     }
 }
