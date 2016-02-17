@@ -7,7 +7,9 @@ An example project for my talk, Building Continuous Delivery: Rock-solid builds 
 * JDK 7 or later
 * The build uses port 8080
 
-After cloning the project, type `./gradlew clean build` on the command line.
+After cloning the project, type the following on the command line:
+
+    ./gradlew clean build
     
 ## Running local server
 
