@@ -26,8 +26,8 @@ class WeatherServiceSpec extends Specification {
 
         where:
         usKelvin | mxKelvin | usFahrenheit | mxFahrenheit | expectedWarmer
-        300      | 301      | 80           | 82           | true
-        301      | 300      | 82           | 80           | false
-        249.81   | 301      | -10          | 82           | true
+        300.0d   | 301.0d   | 80           | 82           | true
+        301.0d   | 300.0d   | 82           | 80           | false
+        249.81d  | 301.0d   | -10          | 82           | true
     }
 }
