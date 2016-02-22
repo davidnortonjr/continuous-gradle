@@ -32,7 +32,10 @@ uploadArchives {
 
 dependencies {
     compile "org.codehaus.groovy:groovy-all:${groovyVersion}"
-    compile "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
+    compile "org.springframework.boot:spring-boot-starter-web:${springBootVersion}", {
+        exclude module: "spring-boot-starter-tomcat"
+    }
+    compile "org.springframework.boot:spring-boot-starter-jetty:${springBootVersion}"
     compile "org.springframework.boot:spring-boot-starter-actuator:${springBootVersion}"
 
     testCompile "org.spockframework:spock-core:${spockVersion}"
