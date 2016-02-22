@@ -1,6 +1,7 @@
 buildscript {
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath 'com.bmuschko:gradle-docker-plugin:2.6.5'
     }
 
 	repositories {
@@ -10,6 +11,8 @@ buildscript {
 
 apply plugin: 'spring-boot'
 apply plugin: 'groovy'
+apply plugin: 'application'
+apply plugin: 'com.bmuschko.docker-java-application'
 
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
@@ -46,3 +49,20 @@ import org.apache.tools.ant.filters.ReplaceTokens
 processResources {
     filter(ReplaceTokens, tokens: [appVersion: project.version])
 }
+
+/* Uncomment to enable building a Docker image as part of the build
+
+docker {
+    url = "${System.env.DOCKER_HOST}".replaceFirst('tcp','https')
+//    certPath = new File(System.properties['user.home'], '.docker/machine/machines/default')
+
+    javaApplication {
+        baseImage = 'java:8'
+        maintainer = 'David Norton "david.norton@objectpartners.com"'
+        port = 8080
+        tag = "${name}:${version}"
+    }
+}
+
+assemble.dependsOn dockerBuildImage
+*/
