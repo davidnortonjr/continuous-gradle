@@ -38,3 +38,4 @@ After cloning the project, type the following on the command line:
     # open http://localhost:8080 in your browser
 
 The included OpenWeatherMap API key may expire sometime after this example was created. If that occurs, go to [http://openweathermap.org/appid#get]() to get a new one and place it in `src/main/resources/application.properties`
+
