@@ -1,4 +1,4 @@
 build:
-  image: 8u91-jre
+  image: java:8u91-jre
   commands:
     - ./gradlew clean build
